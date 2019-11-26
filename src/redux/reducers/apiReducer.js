@@ -1,25 +1,22 @@
-import {
-    RESPONSE_SUCCESS, RESPONSE_FAILURE
-} from '../actions';
+import { RESPONSE_SUCCESS, SET_LOADING } from '../actions';
 
 const initialState = {
     data: '',
-    error: ''
+    isLoading: false
 }
 
 export function apiReducer(state = initialState, action) {
     switch (action.type) {
         case RESPONSE_SUCCESS:
-            console.log("action", action);
             return {
                 ...state,
-                data: action.value
+                data: action.value,
+                isLoading: false
             }
-        case RESPONSE_FAILURE:
-            console.log("action", action);
+        case SET_LOADING:
             return {
                 ...state,
-                error: action.value
+                isLoading: action.value
             }
         default:
             return state;
