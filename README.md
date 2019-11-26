@@ -9,6 +9,9 @@
 > Open android folder in Android Studio & clean the project
 > Run the command "react-native run-android"
 ```
+
 ## How to run in iOS
+```
 > Run the command "cd ios && pod install"
 > Run the command "react-native run-ios"
+```
